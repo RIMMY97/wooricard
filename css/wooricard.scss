@@ -1,0 +1,410 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
+
+body {
+    font-family: 'NanumBarunGothic', sans-serif;
+}
+
+header {
+    width: 100%;
+
+    .util {
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(45deg, #0078B9, #20C4F4);
+        margin-bottom: 50px;
+
+        #util_wrap {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+
+            #u_custom,
+            #u_list {
+                line-height: 40px;
+
+                li {
+                    position: relative;
+                    float: left;
+                    padding: 0 15px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 15px;
+                        background-color: #fff;
+                    }
+
+                    a {
+                        font-size: 14px;
+                        color: #fff;
+                    }
+                }
+            }
+
+            #u_custom {
+                float: left;
+
+                li {
+
+                    &:nth-child(1) {
+                        background: #fff;
+
+                        a {
+                            color: #000;
+                        }
+                    }
+
+                    &:nth-of-type(1),
+                    &:nth-of-type(2) {
+                        &::before {
+                            content: "";
+                            width: 0;
+                        }
+                    }
+                }
+            }
+
+            #u_list {
+                float: right;
+
+                li {
+                    &:nth-of-type(1) {
+                        &::before {
+                            content: "";
+                            width: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //t_nav
+
+    #util_wrap,
+    nav {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    nav {
+        position: relative;
+        height: 80px;
+        font-size: 0;
+
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        h1 a {
+            display: block;
+            float: left;
+            background: url(../img/logo_woori.png) center/cover;
+            width: 175px;
+            height: 80px;
+        }
+
+        #b_1dep {
+            float: right;
+
+            > li {
+                cursor: pointer;
+                float: left;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 80px;
+                padding: 0 30px;
+
+                &:nth-of-type(7) {
+                    margin-right: 25px;
+                }
+
+                &:hover #b_2dep {
+                    display: block;
+                }
+
+                #b_2dep {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    padding: 20px 0 30px 0;
+                    background-color: #fff;
+                    z-index: 20;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+
+                    > li {
+                        position: relative;
+                        color: #5E5E5E;
+                        float: left;
+                        line-height: 30px;
+                        width: calc(100% / 5);
+
+                        #li_t {
+                            margin-bottom: 70px;
+                        }
+
+                        > ul > li {
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            #b_menu {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0;
+                width: 25px;
+                height: 2px;
+                background-color: #000;
+                margin-bottom: 5px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 2px;
+                    background-color: #000;
+                    top: 8px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 2px;
+                    background-color: #000;
+                    top: -8px;
+                }
+            }
+        }
+    }
+
+    //b_nav
+}
+
+// header
+.container {
+    position: relative;
+    width: 100%;
+
+    .main {
+        position: relative;
+        width: 100%;
+        height: 400px;
+
+        ul {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            li {
+                #title {
+                    position: relative;
+                    width: 1100px;
+                    height: 100%;
+                    margin: 0 auto;
+                    font-size: 14px;
+
+                    #title_wrapper {
+                        position: absolute;
+                        margin-left: 50px;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        h2 {
+                            line-height: 30px;
+
+                            strong {
+                                font-size: 30px;
+                            }
+                        }
+
+                        p {
+                            position: relative;
+                            font-size: 16px;
+                            line-height: 20px;
+                            padding-top: 30px;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 15px;
+                                width: 30px;
+                                height: 2px;
+                                background-color: #0078B9;
+                            }
+                        }
+
+                        button {
+                            cursor: pointer;
+                            border: 1px solid #505050;
+                            border-radius: 5px;
+                            background-color: transparent;
+                            color: #505050;
+                            padding: 10px 30px;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+
+            #item_01 {
+                background: url(../img/bg_APT.jpg) center/cover;
+                width: 100%;
+                height: 400px;
+            }
+
+            #item_02 {
+                background: url(../img/bg_spring.jpg);
+                width: 100%;
+                height: 400px;
+            }
+
+            #item_03 {
+                background: url(../img/bg_saving.jpg);
+                width: 100%;
+                height: 400px;
+            }
+        }
+
+        // banner
+        #event {
+            position: absolute;
+            margin-left: 410px;
+            bottom: 5px;
+
+            a {
+                background-color: #5E5E5E;
+                padding: 5px 20px;
+                color: #fff;
+            }
+        }
+
+        //bottom event +
+        #login {
+            position: absolute;
+            right: 410px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            form {
+                margin-right: 50px;
+
+                fieldset {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    padding: 25px 50px;
+                    max-width: 225px;
+                    background-color: #20C4F4;
+
+                    ul li {
+                        position: relative;
+                        cursor: pointer;
+                        display: inline-block;
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                        padding: 0 10px;
+                        color: #fff;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 1px;
+                            height: 13px;
+                            background-color: #fff;
+                            left: 0;
+                        }
+
+                        &:nth-child(1) {
+                            padding: 0 10px 0 0;
+                            color: #FF5B93;
+                            font-weight: bold;
+
+                            &::before {
+                                content: "";
+                                width: 0;
+                            }
+                        }
+                    }
+
+                     label input {
+                        width: 100%;
+                        height: 40px;
+                        border: 1px solid #C7C7C7;
+                    }
+
+                    #security {
+                        margin-top: 15px;
+
+                        input {
+                            display: inline-block;
+                        }
+
+                        label {
+                            font-size: 14px;
+                            color: #fff;
+                        }
+                    }
+
+                    button {
+                        border: none;
+                        margin-top: 15px;
+                        background-color: #FF5B93;                    
+                        color: #fff;
+                        font-size: 16px;
+                        text-align: center;
+                        width: 100%;
+                        height: 40px;
+                    }
+
+                    #member {
+                        margin-top: 15px;
+                        width: 100%;
+                        font-size: 14px;
+                        color: #fff;
+
+                        #find {
+                            float: left;
+                        }
+
+                        #sign_up {
+                            float: right;
+                            right: 0;
+                        }
+                        
+                        a span{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        
+        //login
+    }
+    
+    //main
+}
+
+//container
