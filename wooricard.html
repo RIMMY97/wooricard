@@ -380,7 +380,7 @@
     </header>
     <!--    header-->
     <div class="container">
-        <div class="main">
+        <div class="slide_banner">
             <ul>
                 <li id="item_01">
                     <div id="title">
@@ -422,28 +422,210 @@
             </div>
             <div id="login">
                 <form>
-                  <fieldset>
-                   <ul>
-                       <li>아이디</li>
-                       <li>공인인증서</li>
-                   </ul>
-                   <label for="id">
-                        <input id="id"type="text" placeholder="아이디">
-                    </label>
-                    <label for="pass">
-                        <input id="pass" type="password" placeholder="비밀번호">
-                    </label>
-                    <p id="security">
-                        <input type="checkbox" id="member_check">
-                        <label for="member_check">아이디 저장하기</label>
-                    </p>
-                    <button>로그인</button>
-                    <div id="member">
-                        <a href="#" id="find"><span>아이디/비밀번호 찾기</span></a>
-                        <a href="#" id="sign_up"><span>회원가입</span></a>
-                    </div>
+                    <fieldset>
+                        <ul>
+                            <li>아이디</li>
+                            <li>공인인증서</li>
+                        </ul>
+                        <label for="id">
+                            <input id="id" type="text" placeholder="아이디">
+                        </label>
+                        <label for="pass">
+                            <input id="pass" type="password" placeholder="비밀번호">
+                        </label>
+                        <p id="security">
+                            <input type="checkbox" id="member_check">
+                            <label for="member_check">아이디 저장하기</label>
+                        </p>
+                        <button>로그인</button>
+                        <div id="member">
+                            <a href="#" id="find"><span>아이디/비밀번호 찾기</span></a>
+                            <a href="#" id="sign_up"><span>회원가입</span></a>
+                        </div>
                     </fieldset>
                 </form>
+            </div>
+        </div>
+        <!--        main-->
+        <div class="quick_menu">
+            <ul>
+                <li>
+                    <a href="#" id="card">
+                        <span>카드신청</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="use">
+                        <span>카드사용등록</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="spec">
+                        <span>이용대금명세서</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="limit">
+                        <span>이용한도</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="pay">
+                        <span>결제예정금액</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="ok">
+                        <span>승인내역</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="pre">
+                        <span>선결제</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--       quick_menu-->
+        <div class="gray_box">
+            <div class="card">
+                <a href="#">카드안내·신청<img src="img/btn_arrow.png" alt=""></a>
+                <div id="card_slide">
+                    <button id="prev"></button>
+                    <button id="next"></button>
+                    <div id="card_wrap">
+                        <ul>
+                            <li><a href="#">
+                                    <p><img src="img/card/card_01.png" alt="card"></p>
+                                    <span>CJ ONE<br>체크</span>
+                                </a></li>
+                            <li><a href="#">
+                                    <p><img src="img/card/card_02.png" alt="card"></p>
+                                    <span>카드의정석APT<br>PLATINUM</span>
+                                </a></li>
+                            <li><a href="#">
+                                    <p><img src="img/card/card_03.png" alt="card"></p>
+                                    <span>카드의정석POINT</span>
+                                </a></li>
+                            <li><a href="#">
+                                    <p><img src="img/card/card_04.png" alt="card"></p>
+                                    <span>카드의정석<br>체크</span>
+                                </a></li>
+                            <li><a href="#">
+                                    <p><img src="img/card/card_05.png" alt="card"></p>
+                                    <span>카드의정석APT</span>
+                                </a></li>
+                            <li><a href="#">
+                                    <p><img src="img/card/card_06.png" alt="card"></p>
+                                    <span>카드의정석<br>L.POINT</span>
+                                </a></li>
+                            <li><a href="#">
+                                    <p><img src="img/card/card_07.png" alt="card"></p>
+                                    <span>카드의정석<br>DISCOUNT</span>
+                                </a></li>
+                            <li><a href="#">
+                                    <p><img src="img/card/card_08.png" alt="card"></p>
+                                    <span>아이파킹<br>크레딧 카</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="sel_box">
+                    <a href="#">내게 맞는 카드 찾기</a>
+                    <a href="#">카드 발급조회</a>
+                    <a href="#">분실신고</a>
+                </div>
+            </div>
+            <!--            card-->
+            <div class="finance">
+                <h3>금융</h3>
+                <ul>
+                    <li><a href="#">
+                            <h4>단기카드대출<br>(현금서비스)</h4>
+                            <p>언제 어디서나 쉽게 빠르게<br>한도내에서 필요한 만큼</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>장기카드대출<br>(카드론)</h4>
+                            <p>無방문 無보증 無서류<br>편리한 대출과 상환</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>일부결제금액이월약정<br>(리볼빙)</h4>
+                            <p>최저결제비율 ~ 100%<br>내 마음대로 선택</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4>올인원 대출/신용대출</h4>
+                            <p>우리카드 없어도<br>24시간 이용가능한 대출</p>
+                        </a></li>
+                </ul>
+            </div>
+            <!--           finance-->
+        </div>
+        <!--        gray_box-->
+        <div class="darkgray_box">
+            <div class="card_section">
+                <div class="card01">
+                
+                <ul>
+                    <li></li>
+                </ul>
+                </div>
+                <div class="card02">
+                    <div id="card02_wrap">
+                        <h4>
+                            카드로바로바로<br>
+                            <strong>자동납부서비스</strong>
+                        </h4>
+                        <ul>
+                            <li><a href="#">
+                                    아파트관리비
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                            <li><a href="#">
+                                    임대료
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                            <li><a href="#">
+                                    전기요금
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                            <li><a href="#">
+                                    도시가스요금
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                            <li><a href="#">
+                                    4대사회보험
+                                    <img src="img/btn_arrow.png" alt="arrow">
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card03">
+                    <ul>
+                        <li>
+                            <h4>고객상담센터</h4>
+                        </li>
+                        <li>
+                            1588-9955<br>
+                            1599-9955
+                        </li>
+                        <li>
+                            카드간편신청<br>
+                            1599-0200
+                        </li>
+                        <li>
+                            금융서비스<br>
+                            1577-9000
+                        </li>
+                        <li>
+                            해외문의<br>
+                            82-2-6958-9000
+                        </li>
+                        <li>
+                            상담시간<br>
+                            09:00~18:00
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

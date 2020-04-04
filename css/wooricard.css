@@ -33,35 +33,89 @@ header nav #b_1dep #b_menu::before { content: ""; position: absolute; width: 25p
 header nav #b_1dep #b_menu::after { content: ""; position: absolute; width: 25px; height: 2px; background-color: #000; top: -8px; }
 
 .container { position: relative; width: 100%; }
-.container .main { position: relative; width: 100%; height: 400px; }
-.container .main ul { width: 100%; height: 100%; overflow: hidden; }
-.container .main ul li #title { position: relative; width: 1100px; height: 100%; margin: 0 auto; font-size: 14px; }
-.container .main ul li #title #title_wrapper { position: absolute; margin-left: 50px; top: 50%; transform: translateY(-50%); }
-.container .main ul li #title #title_wrapper h2 { line-height: 30px; }
-.container .main ul li #title #title_wrapper h2 strong { font-size: 30px; }
-.container .main ul li #title #title_wrapper p { position: relative; font-size: 16px; line-height: 20px; padding-top: 30px; }
-.container .main ul li #title #title_wrapper p::before { content: ""; position: absolute; top: 15px; width: 30px; height: 2px; background-color: #0078B9; }
-.container .main ul li #title #title_wrapper button { cursor: pointer; border: 1px solid #505050; border-radius: 5px; background-color: transparent; color: #505050; padding: 10px 30px; margin-top: 15px; }
-.container .main ul #item_01 { background: url(../img/bg_APT.jpg) center/cover; width: 100%; height: 400px; }
-.container .main ul #item_02 { background: url(../img/bg_spring.jpg); width: 100%; height: 400px; }
-.container .main ul #item_03 { background: url(../img/bg_saving.jpg); width: 100%; height: 400px; }
-.container .main #event { position: absolute; margin-left: 410px; bottom: 5px; }
-.container .main #event a { background-color: #5E5E5E; padding: 5px 20px; color: #fff; }
-.container .main #login { position: absolute; right: 410px; top: 50%; transform: translateY(-50%); }
-.container .main #login form { margin-right: 50px; }
-.container .main #login form fieldset { position: relative; overflow: hidden; margin: 0 auto; padding: 25px 50px; max-width: 225px; background-color: #20C4F4; }
-.container .main #login form fieldset ul li { position: relative; cursor: pointer; display: inline-block; font-size: 14px; margin-bottom: 15px; padding: 0 10px; color: #fff; }
-.container .main #login form fieldset ul li:before { content: ""; position: absolute; top: 50%; transform: translateY(-50%); width: 1px; height: 13px; background-color: #fff; left: 0; }
-.container .main #login form fieldset ul li:nth-child(1) { padding: 0 10px 0 0; color: #FF5B93; font-weight: bold; }
-.container .main #login form fieldset ul li:nth-child(1)::before { content: ""; width: 0; }
-.container .main #login form fieldset label input { width: 100%; height: 40px; border: 1px solid #C7C7C7; }
-.container .main #login form fieldset #security { margin-top: 15px; }
-.container .main #login form fieldset #security input { display: inline-block; }
-.container .main #login form fieldset #security label { font-size: 14px; color: #fff; }
-.container .main #login form fieldset button { border: none; margin-top: 15px; background-color: #FF5B93; color: #fff; font-size: 16px; text-align: center; width: 100%; height: 40px; }
-.container .main #login form fieldset #member { margin-top: 15px; width: 100%; font-size: 14px; color: #fff; }
-.container .main #login form fieldset #member #find { float: left; }
-.container .main #login form fieldset #member #sign_up { float: right; right: 0; }
-.container .main #login form fieldset #member a span { color: #fff; }
+.container .slide_banner { position: relative; width: 100%; height: 400px; }
+.container .slide_banner ul { width: 100%; height: 100%; overflow: hidden; }
+.container .slide_banner ul li #title { position: relative; width: 1100px; height: 100%; margin: 0 auto; font-size: 14px; }
+.container .slide_banner ul li #title #title_wrapper { position: absolute; margin-left: 50px; top: 50%; transform: translateY(-50%); }
+.container .slide_banner ul li #title #title_wrapper h2 { line-height: 30px; }
+.container .slide_banner ul li #title #title_wrapper h2 strong { font-size: 30px; }
+.container .slide_banner ul li #title #title_wrapper p { position: relative; font-size: 16px; line-height: 20px; padding-top: 30px; }
+.container .slide_banner ul li #title #title_wrapper p::before { content: ""; position: absolute; top: 15px; width: 30px; height: 2px; background-color: #0078B9; }
+.container .slide_banner ul li #title #title_wrapper button { cursor: pointer; border: 1px solid #505050; border-radius: 5px; background-color: transparent; color: #505050; padding: 10px 30px; margin-top: 15px; }
+.container .slide_banner ul #item_01 { background: url(../img/bg_APT.jpg) center/cover; width: 100%; height: 400px; }
+.container .slide_banner ul #item_02 { background: url(../img/bg_spring.jpg); width: 100%; height: 400px; }
+.container .slide_banner ul #item_03 { background: url(../img/bg_saving.jpg); width: 100%; height: 400px; }
+.container .slide_banner #event { position: absolute; margin-left: 410px; bottom: 5px; }
+.container .slide_banner #event a { background-color: #5E5E5E; padding: 5px 20px; color: #fff; }
+.container .slide_banner #login { position: absolute; right: 410px; top: 50%; transform: translateY(-50%); }
+.container .slide_banner #login form { margin-right: 50px; }
+.container .slide_banner #login form fieldset { position: relative; overflow: hidden; margin: 0 auto; padding: 25px 50px; max-width: 225px; background-color: #20C4F4; }
+.container .slide_banner #login form fieldset ul li { position: relative; cursor: pointer; display: inline-block; font-size: 14px; margin-bottom: 15px; padding: 0 10px; color: #fff; }
+.container .slide_banner #login form fieldset ul li:before { content: ""; position: absolute; top: 50%; transform: translateY(-50%); width: 1px; height: 13px; background-color: #fff; left: 0; }
+.container .slide_banner #login form fieldset ul li:nth-child(1) { padding: 0 10px 0 0; color: #FF5B93; font-weight: bold; }
+.container .slide_banner #login form fieldset ul li:nth-child(1)::before { content: ""; width: 0; }
+.container .slide_banner #login form fieldset label input { width: 100%; height: 40px; border: 1px solid #C7C7C7; }
+.container .slide_banner #login form fieldset #security { margin-top: 15px; }
+.container .slide_banner #login form fieldset #security input { display: inline-block; }
+.container .slide_banner #login form fieldset #security label { font-size: 14px; color: #fff; }
+.container .slide_banner #login form fieldset button { border: none; margin-top: 15px; background-color: #FF5B93; color: #fff; font-size: 16px; text-align: center; width: 100%; height: 40px; }
+.container .slide_banner #login form fieldset #member { margin-top: 15px; width: 100%; font-size: 14px; color: #fff; }
+.container .slide_banner #login form fieldset #member #find { float: left; }
+.container .slide_banner #login form fieldset #member #sign_up { float: right; right: 0; }
+.container .slide_banner #login form fieldset #member a span { color: #fff; }
+.container .quick_menu { position: relative; width: 1100px; margin: 0 auto; height: 140px; }
+.container .quick_menu ul { display: flex; width: 100%; height: 140px; overflow: hidden; }
+.container .quick_menu ul li { width: calc(100% / 7); text-align: center; }
+.container .quick_menu ul li a { display: block; width: 100%; height: 100%; background-size: 60px 60px; }
+.container .quick_menu ul li a span { display: block; padding-top: 96px; }
+.container .quick_menu ul li #card { background: url(../img/icon_card.png) center 23px no-repeat; }
+.container .quick_menu ul li #use { background: url(../img/icon_use.png) center 23px no-repeat; }
+.container .quick_menu ul li #spec { background: url(../img/icon_spec.png) center 23px no-repeat; }
+.container .quick_menu ul li #limit { background: url(../img/icon_limit.png) center 23px no-repeat; }
+.container .quick_menu ul li #pay { background: url(../img/icon_pay.png) center 23px no-repeat; }
+.container .quick_menu ul li #ok { background: url(../img/icon_ok.png) center 23px no-repeat; }
+.container .quick_menu ul li #pre { background: url(../img/icon_pre.png) center 23px no-repeat; }
+.container .gray_box { position: relative; width: 100%; background-color: #F1F1F1; }
+.container .gray_box::after { content: ""; display: block; clear: both; }
+.container .gray_box .card, .container .gray_box .finance { position: relative; width: 1100px; margin: 0 auto; }
+.container .gray_box .card { margin-bottom: 80px; }
+.container .gray_box .card > a { display: block; padding: 40px 0 40px 0; font-size: 30px; }
+.container .gray_box .card > a img { margin-left: 15px; }
+.container .gray_box .card #card_slide { position: relative; width: 100%; margin-bottom: 40px; }
+.container .gray_box .card #card_slide button { position: absolute; display: block; top: 50%; transform: translateY(-50%); border: none; width: 60px; height: 60px; background-color: rgba(141, 141, 141, 0.5); }
+.container .gray_box .card #card_slide button:hover { background-color: rgba(141, 141, 141, 0.8); }
+.container .gray_box .card #card_slide #prev { left: 0; }
+.container .gray_box .card #card_slide #prev::before { content: ''; position: absolute; top: 17px; left: 22px; width: 20px; height: 20px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(-135deg); }
+.container .gray_box .card #card_slide #next { right: 0; }
+.container .gray_box .card #card_slide #next::before { content: ''; position: absolute; top: 17px; left: 13px; width: 20px; height: 20px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); }
+.container .gray_box .card #card_slide #card_wrap { width: 100%; overflow: hidden; }
+.container .gray_box .card #card_slide #card_wrap ul { display: flex; }
+.container .gray_box .card #card_slide #card_wrap ul li { width: calc(100%/ 5); text-align: center; }
+.container .gray_box .card #card_slide #card_wrap ul li span { font-size: 14px; }
+.container .gray_box .card #sel_box { float: right; }
+.container .gray_box .card #sel_box a { display: inline-block; font-size: 16px; border-radius: 5px; background-color: #FF5B93; color: #fff; padding: 5px 20px; }
+.container .gray_box .finance { margin-bottom: 80px; }
+.container .gray_box .finance h3 { font-size: 30px; margin-bottom: 40px; }
+.container .gray_box .finance ul { display: flex; justify-content: center; align-items: center; width: 100%; }
+.container .gray_box .finance ul li { position: relative; text-align: center; font-size: 20px; line-height: 20px; background-color: #fff; margin: 10px 10px; width: 250px; height: 250px; border-radius: 20px; }
+.container .gray_box .finance ul li h4 { margin-top: 67.5px; }
+.container .gray_box .finance ul li p { position: relative; padding-top: 35px; font-size: 14px; color: #9E9E9E; }
+.container .gray_box .finance ul li p::before { content: ""; position: absolute; top: 15px; width: 30px; height: 2px; left: 50%; transform: translateX(-50%); background-color: #0078B9; }
+.container .darkgray_box { position: relative; background-color: #D8D8D8; width: 100%; height: 610px; }
+.container .darkgray_box .card_section { position: relative; width: 1100px; margin: 0 auto; padding-top: 40px; }
+.container .darkgray_box .card_section .card01 { position: absolute; width: 785px; height: 450px; background-color: #fff; left: 0; overflow: hidden; }
+.container .darkgray_box .card_section .card02 { position: absolute; width: 315px; height: 450px; background-color: #BFA7DF; right: 0; }
+.container .darkgray_box .card_section .card02 #card02_wrap { margin-top: 36px; margin-left: 64px; }
+.container .darkgray_box .card_section .card02 #card02_wrap h4 { color: #535353; font-size: 20px; line-height: 30px; margin-bottom: 55px; }
+.container .darkgray_box .card_section .card02 #card02_wrap h4 strong { font-size: 30px; color: #000; }
+.container .darkgray_box .card_section .card02 #card02_wrap ul li { margin-bottom: 30px; }
+.container .darkgray_box .card_section .card02 #card02_wrap ul li a { font-size: 20px; }
+.container .darkgray_box .card_section .card02 #card02_wrap ul li a img { margin-left: 20px; }
+.container .darkgray_box .card_section .card03 { position: absolute; width: 100%; height: 120px; background-color: #F5BD4D; top: 490px; }
+.container .darkgray_box .card_section .card03 ul { display: flex; padding-left: 40px; width: 98%; height: 100%; }
+.container .darkgray_box .card_section .card03 ul li { font-size: 20px; line-height: 40px; width: calc(100%/6); text-align: center; padding-top: 25px; }
+.container .darkgray_box .card_section .card03 ul li h4 { font-size: 30px; padding-top: 25px; }
+.container .darkgray_box .card_section .card03 ul li strong { font-weight: bold; }
+.container .darkgray_box .card_section .card03 ul li:nth-of-type(2) { font-size: 30px; }
 
 /*# sourceMappingURL=wooricard.css.map */
