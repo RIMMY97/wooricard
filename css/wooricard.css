@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
-body { font-family: 'NanumBarunGothic', sans-serif; }
+body { font-family: 'NanumBarunGothic', sans-serif; letter-spacing: 0.02rem; }
 
 header { width: 100%; }
 header .util { width: 100%; height: 40px; background: linear-gradient(45deg, #0078B9, #20C4F4); margin-bottom: 50px; }
@@ -117,5 +117,68 @@ header nav #b_1dep #b_menu::after { content: ""; position: absolute; width: 25px
 .container .darkgray_box .card_section .card03 ul li h4 { font-size: 30px; padding-top: 25px; }
 .container .darkgray_box .card_section .card03 ul li strong { font-weight: bold; }
 .container .darkgray_box .card_section .card03 ul li:nth-of-type(2) { font-size: 30px; }
+.container .notice { width: 1100px; margin: 0 auto; }
+.container .notice::after { content: ""; display: block; clear: both; }
+.container .notice > ul { width: 100%; display: flex; margin: 40px 0; }
+.container .notice > ul li { position: relative; }
+.container .notice > ul li h4 { font-size: 20px; }
+.container .notice > ul li #bee_mem span, .container .notice > ul li #market span, .container .notice > ul li #smart span { font-weight: 500; font-size: 16px; color: #E8E8E8; }
+.container .notice > ul li #bee_mem span strong, .container .notice > ul li #market span strong, .container .notice > ul li #smart span strong { font-size: 20px; color: #000; }
+.container .notice > ul #news, .container .notice > ul #protection { position: relative; margin-right: 90px; }
+.container .notice > ul #news::after, .container .notice > ul #protection::after { content: ''; position: absolute; top: 50%; right: -45px; transform: translateY(-50%); background-color: #C7C7C7; width: 1px; height: 100px; }
+.container .notice > ul #news h4, .container .notice > ul #protection h4 { position: relative; margin-bottom: 30px; }
+.container .notice > ul #news { position: relative; width: 350px; }
+.container .notice > ul #news h4::after { content: ""; position: absolute; width: 15px; height: 2px; background-color: #000; top: 10px; right: 0; }
+.container .notice > ul #news h4::before { content: ""; position: absolute; width: 2px; height: 15px; background-color: #000; top: 4px; right: 6px; }
+.container .notice > ul #news a { width: 100%; float: left; margin-bottom: 10px; }
+.container .notice > ul #news a:nth-child(n+2) { color: #000; font-weight: lighter; color: #6E6E6E; }
+.container .notice > ul #news a p { float: right; }
+.container .notice > ul #protection { position: relative; width: 240px; }
+.container .notice > ul #protection h4 #p_prev { position: absolute; right: 40px; transform: rotate(-180deg); }
+.container .notice > ul #protection h4 #p_next { position: absolute; right: 0; }
+.container .notice > ul #protection ul { position: relative; width: 240px; height: 77px; border: 1px solid #707070; overflow: hidden; }
+.container .notice > ul #protection ul li { width: 100%; height: 100%; color: #6E6E6E; }
+.container .notice > ul #protection ul li a { font-size: 16px; line-height: 20px; }
+.container .notice > ul #protection ul li a img { position: absolute; top: 20px; left: 20px; width: 40px; height: 40px; }
+.container .notice > ul #protection ul li a p { position: absolute; top: 20px; right: 20px; }
+.container .notice > ul #woori { width: 330px; height: 130px; overflow: hidden; }
+.container .notice > ul #woori a { width: 100%; height: 100%; display: block; }
+.container .notice > ul #woori a span { display: block; line-height: 30px; padding: 30px 0 0 30px; }
+.container .notice > ul #woori #bee_mem { background: url(../img/woori_section/members.jpg) center/cover; }
+.container .notice > ul #woori #market { background: url(../img/woori_section/market.jpg) center/cover; }
+.container .notice > ul #woori #smart { background: url(../img/woori_section/smartapp.jpg) center/cover; }
+
+footer { width: 100%; border-top: 1px solid #D8D8D8; }
+footer::after { content: ""; clear: both; display: block; }
+footer .footer_inner { position: relative; width: 1100px; margin: 0 auto; padding: 25px; }
+footer .footer_inner > ul { overflow: hidden; margin-bottom: 25px; }
+footer .footer_inner > ul li { position: relative; float: left; font-size: 14px; margin-right: 40px; }
+footer .footer_inner > ul li::after { content: ""; position: absolute; width: 1px; height: 14px; background-color: #878787; right: -20px; }
+footer .footer_inner > ul li:last-child::after { content: ""; width: 0; }
+footer .footer_inner > ul li:nth-of-type(5) a, footer .footer_inner > ul li:nth-of-type(6) a, footer .footer_inner > ul li:nth-of-type(7) a { font-weight: 600; }
+footer .footer_inner > ul li a { position: relative; color: #878787; }
+footer .footer_inner .sel_box { position: absolute; top: 20px; right: 25px; border: 1px solid #707070; }
+footer .footer_inner .sel_box #select p { position: relative; font-size: 14px; color: #878787; padding: 5px 50px 5px 15px; cursor: pointer; }
+footer .footer_inner .sel_box #select p.on { border-bottom: 1px solid #C7C7C7; }
+footer .footer_inner .sel_box #select p::after { content: ''; position: absolute; top: 4px; right: 15px; width: 10px; height: 10px; border-top: 1px solid #878787; border-right: 1px solid #878787; transform: rotate(135deg); }
+footer .footer_inner .sel_box ul { display: none; padding: 10px; }
+footer .footer_inner .sel_box ul li { margin-bottom: 10px; }
+footer .footer_inner .sel_box ul li a { font-size: 14px; color: #878787; }
+footer .footer_inner > p { font-size: 14px; color: #878787; margin-bottom: 10px; }
+footer .footer_inner > p:nth-child(2) { margin-bottom: 25px; }
+footer .footer_inner > p span { position: relative; }
+footer .footer_inner > p span:nth-child(1) { margin-right: 20px; }
+footer .footer_inner > p span:nth-child(1)::after { content: ""; position: absolute; width: 1px; height: 14px; background-color: #878787; right: -10px; }
+footer .footer_inner #copy { margin-bottom: 25px; }
+footer .footer_inner .woori_sns { position: absolute; top: 67px; right: 25px; font-size: 0; }
+footer .footer_inner .woori_sns img { margin-left: 10px; }
+footer .footer_inner > img { position: absolute; right: 25px; bottom: 25px; }
+footer .footer_inner .award { position: relative; }
+footer .footer_inner .award p::after { content: ''; position: absolute; top: 10px; width: 10px; height: 10px; border-top: 1px solid #878787; border-right: 1px solid #878787; }
+footer .footer_inner .award #a_prev::after { content: ""; left: 0; transform: rotate(-135deg); }
+footer .footer_inner .award #a_next::after { content: ""; left: 560px; transform: rotate(45deg); }
+footer .footer_inner .award ul { width: 510px; height: 30px; overflow: hidden; margin: 0 30px; }
+footer .footer_inner .award ul li { float: left; display: flex; font-size: 12px; margin-right: 25px; color: #878787; }
+footer .footer_inner .award ul li img { margin-right: 10px; }
 
 /*# sourceMappingURL=wooricard.css.map */
