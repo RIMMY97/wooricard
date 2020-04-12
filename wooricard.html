@@ -3,9 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>개인카드 - 우리카드</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="res/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/wooricard.css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/wooricard.js"></script>
 </head>
 
@@ -381,43 +386,53 @@
     <!--    header-->
     <div class="container">
         <div class="slide_banner">
-            <ul>
-                <li id="item_01">
-                    <div id="title">
-                        <div id="title_wrapper">
-                            <h2>
-                                아파트 관리비 할인 혜택을 담다!<br>
-                                <strong>카드 쓰고 벤츠 타다</strong>
-                            </h2>
-                            <p>"카드의 정석 APT"<br>카드 사용하고 벤츠 타자!</p>
-                            <button>자세히 보기</button>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide item_01">
+                        <div id="title">
+                            <div id="title_wrapper">
+                                <h2>
+                                    아파트 관리비 할인 혜택을 담다!<br>
+                                    <strong>카드 쓰고 벤츠 타다</strong>
+                                </h2>
+                                <p>"카드의 정석 APT"<br>카드 사용하고 벤츠 타자!</p>
+                                <button>자세히 보기</button>
+                            </div>
                         </div>
                     </div>
-                </li>
-                <li id="item_02">
-                    <div id="title">
-                        <h2>
-                            20대 고객을 위한 WOORI의 이벤트<br>
-                            <strong>20대를 위한 봄 사랑</strong>
-                        </h2>
-                        <p>채크카드 발급한 후 누적 10만원 이상 사용한<br>20대 고객에게 우리카드 노트북 부터 치킨까지 쏩니다!</p>
-                        <button>자세히 보기</button>
+                    <div class="swiper-slide item_02">
+                        <div id="title">
+                            <div id="title_wrapper">
+                                <h2>
+                                    20대 고객을 위한 WOORI의 이벤트<br>
+                                    <strong>20대를 위한 봄 사랑</strong>
+                                </h2>
+                                <p>채크카드 발급한 후 누적 10만원 이상 사용한<br>20대 고객에게 우리카드 노트북 부터 치킨까지 쏩니다!</p>
+                                <button>자세히 보기</button>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li id="item_03">
-                    <div id="title">
-                        <h2>
-                            우리카드X우리종합금융<br>
-                            <strong>드림정기적금 최대 연 8.0%!</strong>
-                        </h2>
-                        <p>우리 CMA 체크카드 이용하면<br>우리종금 더 드림「정기적금 최고금리」연8%!</p>
-                        <button>자세히 보기</button>
+                    <div class="swiper-slide item_03">
+                        <div id="title">
+                            <div id="title_wrapper">
+                                <h2>
+                                    우리카드X우리종합금융<br>
+                                    <strong>드림정기적금 최대 연 8.0%!</strong>
+                                </h2>
+                                <p>우리 CMA 체크카드 이용하면<br>우리종금 더 드림「정기적금 최고금리」연8%!</p>
+                                <button>자세히 보기</button>
+                            </div>
+                        </div>
                     </div>
-                </li>
-            </ul>
-            <div id="event">
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+            </div>
+            <div id="more">
                 <a href="#">
                     <span>진행중인 이벤트 +</span>
+                    <span id="player"></span>
                 </a>
             </div>
             <div id="login">
@@ -437,7 +452,7 @@
                             <input type="checkbox" id="member_check">
                             <label for="member_check">아이디 저장하기</label>
                         </p>
-                        <button>로그인</button>
+                        <a href="#"><button>로그인</button></a>
                         <div id="member">
                             <a href="#" id="find"><span>아이디/비밀번호 찾기</span></a>
                             <a href="#" id="sign_up"><span>회원가입</span></a>
@@ -489,53 +504,127 @@
         <!--       quick_menu-->
         <div class="gray_box">
             <div class="card">
-                <a href="#">카드안내·신청<img src="img/btn_arrow.png" alt=""></a>
+                <a href="#">카드안내·신청<img src="img/btn_arrow.png" alt="arrow"></a>
                 <div id="card_slide">
-                    <button id="prev"></button>
-                    <button id="next"></button>
-                    <div id="card_wrap">
+                    <div class="imgs_wrap">
                         <ul>
-                            <li><a href="#">
-                                    <p><img src="img/card/card_01.png" alt="card"></p>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_01.png" alt="카드"></a>
                                     <span>CJ ONE<br>체크</span>
-                                </a></li>
-                            <li><a href="#">
-                                    <p><img src="img/card/card_02.png" alt="card"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_02.png" alt="카드"></a>
                                     <span>카드의정석APT<br>PLATINUM</span>
-                                </a></li>
-                            <li><a href="#">
-                                    <p><img src="img/card/card_03.png" alt="card"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_03.png" alt="카드"></a>
                                     <span>카드의정석POINT</span>
-                                </a></li>
-                            <li><a href="#">
-                                    <p><img src="img/card/card_04.png" alt="card"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_04.png" alt="카드"></a>
                                     <span>카드의정석<br>체크</span>
-                                </a></li>
-                            <li><a href="#">
-                                    <p><img src="img/card/card_05.png" alt="card"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_05.png" alt="카드"></a>
                                     <span>카드의정석APT</span>
-                                </a></li>
-                            <li><a href="#">
-                                    <p><img src="img/card/card_06.png" alt="card"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_06.png" alt="카드"></a>
                                     <span>카드의정석<br>L.POINT</span>
-                                </a></li>
-                            <li><a href="#">
-                                    <p><img src="img/card/card_07.png" alt="card"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_07.png" alt="카드"></a>
                                     <span>카드의정석<br>DISCOUNT</span>
-                                </a></li>
-                            <li><a href="#">
-                                    <p><img src="img/card/card_08.png" alt="card"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdImg">
+                                    <a href="#"><img src="img/card/card_08.png" alt="카드"></a>
                                     <span>아이파킹<br>크레딧 카</span>
-                                </a></li>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                </div>
-                <div id="sel_box">
-                    <a href="#">내게 맞는 카드 찾기</a>
-                    <a href="#">카드 발급조회</a>
-                    <a href="#">분실신고</a>
+                    <div class="btn_prev"></div>
+                    <div class="btn_next"></div>
+                    <div id="sel_box">
+                        <a href="#">내게 맞는 카드 찾기</a>
+                        <a href="#">카드 발급조회</a>
+                        <a href="#">분실신고</a>
+                    </div>
                 </div>
             </div>
+
+            <script>
+                $(function() {
+                    var leftValue = 0;
+                    var maxLeft = 0;
+                    setInterval(function() {
+                        maxLeft = -($(".imgs_wrap > ul").outerWidth() - $("#card_slide").outerWidth());
+                        if (leftValue <= maxLeft) {
+                            leftValue = maxLeft;
+                            $(".imgs_wrap > ul").css({
+                                left: leftValue
+                            });
+                        } else {
+                            $("#card_slide > .btn_next").css({
+                                backgroundImage: "url(img/icon_next.png)"
+                            });
+                        }
+                    }, 50);
+
+                    //이벤트 발생
+                    $("#card_slide > .btn_next").click(function() {
+                        $("#card_slide > .btn_prev").css({
+                            backgroundImage: "url(img/icon_prev.png)"
+                        });
+                        leftValue -= 265;
+                        //만약 left에 적용된 속성이 maxLeft가 되면 더이상 증가하거나 감소하지 않게
+                        if (leftValue <= maxLeft) {
+                            leftValue = maxLeft;
+                            $("#card_slide > .btn_next").css({
+                                backgroundImage: "url(img/icon_next.png)"
+                            });
+                        }
+                        //.imgs_wrap > ul 의 left속성이 -265씩 이동
+                        $(".imgs_wrap > ul").css({
+                            left: leftValue
+                        });
+                    });
+
+                    //이벤트 발생
+                    $("#card_slide > .btn_prev").click(function() {
+                        $("#card_slide > .btn_next").css({
+                            backgroundImage: "url(img/icon_next.png)"
+                        });
+                        leftValue += 265;
+                        //만약 left에 적용된 속성이 maxLeft가 되면 더이상 증가하거나 감소하지 않게
+                        if (leftValue >= 0) {
+                            leftValue = 0;
+                            $("#card_slide > .btn_prev").css({
+                                backgroundImage: "url(img/icon_prev.png)"
+                            });
+                        }
+                        //.imgs_wrap > ul 의 left속성이 +265씩 이동
+                        $(".imgs_wrap > ul").css({
+                            left: leftValue
+                        });
+                    });
+                });
+            </script>
             <!--            card-->
             <div class="finance">
                 <h3>금융</h3>
@@ -564,9 +653,151 @@
         <div class="darkgray_box">
             <div class="card_section">
                 <div class="card01">
-
+                    <h4>라이프 스타일</h4>
                     <ul>
-                        <li></li>
+                        <li id="section_01">
+                            <div id="c_title">
+                                <div id="c_title_wrapper">
+                                    <h2>
+                                        우리와 함께라면 더 즐거운 여행<br>
+                                        헤매지 말고 우리와 함꼐하세요
+                                    </h2>
+                                    <p>
+                                        해외/여행 상시 할인&이벤트
+                                        <br>
+                                        국내외 항공·여행·렌터카·호텔까지 한 번에
+                                    </p>
+                                    <a href="#"><button>
+                                            우리카드 여행몰<br>
+                                            바로가기
+                                        </button></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="section_02">
+                            <div id="c_title">
+                                <div id="c_title_wrapper">
+                                    <h2>
+                                        우리카드가 드리는 해외혜택,
+                                        <br>
+                                        빠짐없이 누리세요
+                                    </h2>
+                                    <p>
+                                        우리카드로 해외를 이용하는 방법
+                                    </p>
+                                    <a href="#"><button>
+                                            해외이용안내<br>
+                                            바로가기
+                                        </button></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="section_03">
+                            <div id="c_title">
+                                <div id="c_title_wrapper">
+                                    <h2>
+                                        스마트한 <strong>그린피 할인예약</strong>
+                                        <br>
+                                        우리카드로 누리세요
+                                    </h2>
+                                    <p>
+                                        선결제 할인 예약, 소셜커머스,
+                                        <br>
+                                        골프 여행까지 골프에 대한 모든 혜택
+                                    </p>
+                                    <a href="#"><button>
+                                            골프(XGOLF)서비스
+                                            <br>
+                                            바로가기
+                                        </button></a>
+                                    <a href="#"><button>
+                                            해외골프여행
+                                            <br>
+                                            바로가기
+                                        </button></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="section_04">
+                            <div id="c_title">
+                                <div id="c_title_wrapper">
+                                    <h2>
+                                        우리카드 <strong>웨딩밴드</strong> 가입하고
+                                        <br>
+                                        다양한 혜택 누리세요
+                                    </h2>
+                                    <p>
+                                        우리카드 고객님께 드리는
+                                        <br>
+                                        특별한 웨딩 멤버십 서비스입니다.
+                                    </p>
+                                    <a href="#"><button></button></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="section_05">
+                            <div id="c_title">
+                                <div id="c_title_wrapper">
+                                    <h2>
+                                        내 인생의 <strong>반쪽</strong>에게 당신의
+                                        <br>
+                                        <strong>사랑</strong>을 표현하는 방법
+                                    </h2>
+                                    <p>
+                                        반려동물 쇼핑몰 할인, 선물 배송,
+                                        <br>
+                                        장례비 지원 등 실속 있는 혜택을 챙겨보세요.
+                                    </p>
+                                    <a href="#"><button>
+                                            반려동물 케어서비스 <br>
+                                            바로가기
+                                        </button></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="section_06">
+                            <div id="c_title">
+                                <div id="c_title_wrapper">
+                                    <h2>
+                                        위비렌탈로
+                                        <br>
+                                        알뜰 살뜰하게 장만하세요
+                                    </h2>
+                                    <p>
+                                        렌탈 계약시 상시 할인&이벤트
+                                        <br>
+                                        사은품까지 챙겨가세요
+                                    </p>
+                                    <a href="#"><button>
+                                            위비마켓 렌탈서비스로
+                                            <br>
+                                            바로가기
+                                        </button></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="section_07">
+                            <div id="c_title">
+                                <div id="c_title_wrapper">
+                                    <h2>
+                                        <strong>생활 곳곳</strong>에서 우리카드로
+                                        <br>
+                                        다양한 할인을 누리세요
+                                    </h2>
+                                    <p>
+                                        생활에 플러스 되는 특별한 서비스
+                                    </p>
+                                    <a href="#"><button>
+                                            보험상품몰<br>
+                                            바로가기
+                                        </button></a>
+                                    <a href="#"><button>
+                                            유리교육몰<br>
+                                            바로가기
+                                        </button></a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="card02">
@@ -629,8 +860,8 @@
             </div>
         </div>
         <div class="notice">
-            <ul>
-                <li id="news">
+            <div class="notice_wrap">
+                <div class="news">
                     <a href="#">
                         <h4>공지사항/새소식</h4>
                     </a>
@@ -646,184 +877,213 @@
                         채권양도에 따른 개인(신용)정보
                         <p>20.03.23</p>
                     </a>
-                </li>
-                <li id="protection">
-                    <h4>금융소비자보호<img id="p_prev" src="img/btn_arrow.png" alt="prev"><img id="p_next" src="img/btn_arrow.png" alt="next"></h4>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="img/protection/protection01.jpg" alt="개인정보">
-                                <p>
-                                    불법개인정보를 이용<br>
-                                    금융사기 유의사항 </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/protection/protection02.jpg" alt="신용카드업무">
-                                <p>
-                                    궁금한 신용카드업무<br>
-                                    절차와 기준
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/protection/protection03.jpg" alt="핀테크">
-                                <p>
-                                    핀테크지원센터,<br>
-                                    핀테크 생태계 활성화
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/protection/protection04.jpg" alt="정보포털">
-                                <p>
-                                    금융소비자 정보포털<br>
-                                    파인(FINE)
-                                </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="img/protection/protection05.jpg" alt="보이스피싱">
-                                <p>
-                                    대출빙자형 보이스피싱<br>
-                                    조심하세요
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li id="woori">
-                    <a href="#" id="bee_mem">
-                        <span>
-                            <strong>위비멤버스</strong><br>
-                            돈되는 꿀머니
-                        </span>
-                    </a>
-                    <a href="#" id="market">
-                        <span>
-                            <strong>위비마켓</strong><br>
-                            함께 만드는 쇼핑몰
-                        </span>
-                    </a>
-                    <a href="#" id="smart">
-                        <span>
-                            <strong>스마트앱</strong><br>
-                            편리한 카드생활
-                        </span>
-                    </a>
-                </li>
-            </ul>
+                </div>
+                <div class="protection">
+                    <h4>금융소비자보호</h4>
+                    <div class="control_prev"></div>
+                    <div class="control_next"></div>
+                    <div id="slider">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection01.jpg" alt="개인정보">
+                                    <p>
+                                        불법개인정보를 이용<br>
+                                        금융사기 유의사항 </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection02.jpg" alt="신용카드업무">
+                                    <p>
+                                        궁금한 신용카드업무<br>
+                                        절차와 기준
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection03.jpg" alt="핀테크">
+                                    <p>
+                                        핀테크지원센터,<br>
+                                        핀테크 생태계 활성화
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection04.jpg" alt="정보포털">
+                                    <p>
+                                        금융소비자 정보포털<br>
+                                        파인(FINE)
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/protection/protection05.jpg" alt="보이스피싱">
+                                    <p>
+                                        대출빙자형 보이스피싱<br>
+                                        조심하세요
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="woori">
+                    <input checked="" type="radio" name="slider" id="slide1">
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="inner">
+                                <div class="slide slide_1">
+                                    <div class="slide-content">
+                                        <span>
+                                            <strong>위비멤버스</strong><br>
+                                            돈되는 꿀머니
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="slide slide_2">
+                                    <div class="slide-content">
+                                        <span>
+                                            <strong>위비마켓</strong><br>
+                                            함께 만드는 쇼핑몰
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="slide slide_3">
+                                    <div class="slide-content">
+                                        <span>
+                                            <strong>스마트앱</strong><br>
+                                            편리한 카드생활
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="controls">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                    <div id="bullets">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!--    container-->
     <footer>
-       <div class="footer_inner">
-        <ul>
-            <li><a href="#">회사소개</a></li>
-            <li><a href="#">사회공헌</a></li>
-            <li><a href="#">영업점안내</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">개인신용정보관리보호</a></li>
-            <li><a href="#">고객정보취급방침</a></li>
-            <li><a href="#">ARS안내</a></li>
-        </ul>
-        <div class="sel_box">
-            <div id="select">
-                <p>패밀리사이트</p>
+        <div class="footer_inner">
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">영업점안내</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">개인신용정보관리보호</a></li>
+                <li><a href="#">고객정보취급방침</a></li>
+                <li><a href="#">ARS안내</a></li>
+            </ul>
+            <div class="sel_box">
+                <div id="select">
+                    <p>패밀리사이트</p>
+                </div>
+                <ul>
+                    <li><a href="#">우리금융지주</a></li>
+                    <li><a href="#">우리은행</a></li>
+                    <li><a href="#">우리에프아이에스</a></li>
+                    <li><a href="#">우리신용정보</a></li>
+                    <li><a href="#">우리미소금융재단</a></li>
+                    <li><a href="#">우리금융경영연구소</a></li>
+                    <li><a href="#">우리종합금융</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="#">우리금융지주</a></li>
-                <li><a href="#">우리은행</a></li>
-                <li><a href="#">우리에프아이에스</a></li>
-                <li><a href="#">우리신용정보</a></li>
-                <li><a href="#">우리미소금융재단</a></li>
-                <li><a href="#">우리금융경영연구소</a></li>
-                <li><a href="#">우리종합금융</a></li>
-            </ul>
-        </div>
-        <p>
-            <span>서울특별시 종로구 종로1길 50 더케이트윈타워 (주)우리카드</span>
-            <span>
-                사업자등록번호 101-86-79070
-            </span>
-        </p>
-        <p id="copy">
-            COPYRIGHTS WOORICARD.ALL RIGHTS RESERVED.
-        </p>
-        <div class="woori_sns">
-            <a href="#"><img src="img/logo_nposter.png" alt="logo"></a>
-            <a href="#"><img src="img/logo_naverblog.png" alt="logo"></a>
-            <a href="#"><img src="img/logo_tstory.png" alt="logo"></a>
-            <a href="#"><img src="img/logo_facebook.png" alt="logo"></a>
-            <a href="#"><img src="img/logo_youtube.png" alt="logo"></a>
-        </div>
-        <img src="img/logo_woori_b.png" alt="logo">
-        <div class="award">
-            <p id="a_prev"></p>
-            <ul>
-                <li>
-                    <img src="img/footer/icon_award01.jpg" alt="aword">
-                    2019 제7회 대한민국 브랜드대상<br>
-                    우리카드 ‘카드의정석’
-                </li>
-                <li>
-                    <img src="img/footer/icon_award02.png" alt="aword">
-                    2019 한국표준협회 프리미엄 브랜드지수<br>
-                    체크카드 부문 1위 6년 연속 수상
-                </li>
-                <li>
-                    <img src="img/footer/icon_award03.gif" alt="aword">
-                    2019 소비자에게 신뢰받는<br>
-                    착한브랜드 5년 연속 대상
-                </li>
-                <li>
-                    <img src="img/footer/icon_award05.png" alt="aword">
-                    2019 대한민국 베스트뱅커 대상<br>
-                    베스트 여신금융 부문 수상
-                </li>
-                <li>
-                    <img src="img/footer/icon_award06.png" alt="aword">
-                    제24회 매경금융상품대상<br>
-                    우수상 우리카드 카드의정석
-                </li>
-                <li>
-                    <img src="img/footer/icon_award06.png" alt="aword">
-                    2018 대한민국 금융대상<br>
-                    여신금융대상 수상
-                </li>
-                <li>
-                    <img src="img/footer/icon_award07.gif" alt="aword">
-                    2018 한국의 사회공헌<br>
-                    사회복지부문 대상
-                </li>
-                <li>
-                    <img src="img/footer/icon_award08.jpg" alt="aword">
-                    2018 이데일리 금융산업대상<br>
-                    여신금융협회장상 수상
-                </li>
-                <li>
-                    <img src="img/footer/icon_award09.png" alt="aword">
-                    2018년 퍼스트 굿 브랜드<br>
-                    대상 신용카드부문 수상
-                </li>
-                <li>
-                    <img src="img/footer/icon_award10.png" alt="aword">
-                    제 6회 금융소비자보호대상<br>
-                    여신금융부문 최우수상 수상
-                </li>
-                <li>
-                    <img src="img/footer/icon_award11.jpg" alt="aword">
-                    웹 접근성<br>
-                    우수사이트 인증
-                </li>
-            </ul>
-            <p id="a_next"></p>
-        </div>
+            <p>
+                <span>서울특별시 종로구 종로1길 50 더케이트윈타워 (주)우리카드</span>
+                <span>
+                    사업자등록번호 101-86-79070
+                </span>
+            </p>
+            <p id="copy">
+                COPYRIGHTS WOORICARD.ALL RIGHTS RESERVED.
+            </p>
+            <div class="woori_sns">
+                <a href="#"><img src="img/logo_nposter.png" alt="logo"></a>
+                <a href="#"><img src="img/logo_naverblog.png" alt="logo"></a>
+                <a href="#"><img src="img/logo_tstory.png" alt="logo"></a>
+                <a href="#"><img src="img/logo_facebook.png" alt="logo"></a>
+                <a href="#"><img src="img/logo_youtube.png" alt="logo"></a>
+            </div>
+            <img src="img/logo_woori_b.png" alt="logo">
+            <div class="award">
+                <p id="a_prev"></p>
+                <ul>
+                    <li>
+                        <img src="img/footer/icon_award01.jpg" alt="aword">
+                        2019 제7회 대한민국 브랜드대상<br>
+                        우리카드 ‘카드의정석’
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award02.png" alt="aword">
+                        2019 한국표준협회 프리미엄 브랜드지수<br>
+                        체크카드 부문 1위 6년 연속 수상
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award03.gif" alt="aword">
+                        2019 소비자에게 신뢰받는<br>
+                        착한브랜드 5년 연속 대상
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award05.png" alt="aword">
+                        2019 대한민국 베스트뱅커 대상<br>
+                        베스트 여신금융 부문 수상
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award06.png" alt="aword">
+                        제24회 매경금융상품대상<br>
+                        우수상 우리카드 카드의정석
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award06.png" alt="aword">
+                        2018 대한민국 금융대상<br>
+                        여신금융대상 수상
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award07.gif" alt="aword">
+                        2018 한국의 사회공헌<br>
+                        사회복지부문 대상
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award08.jpg" alt="aword">
+                        2018 이데일리 금융산업대상<br>
+                        여신금융협회장상 수상
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award09.png" alt="aword">
+                        2018년 퍼스트 굿 브랜드<br>
+                        대상 신용카드부문 수상
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award10.png" alt="aword">
+                        제 6회 금융소비자보호대상<br>
+                        여신금융부문 최우수상 수상
+                    </li>
+                    <li>
+                        <img src="img/footer/icon_award11.jpg" alt="aword">
+                        웹 접근성<br>
+                        우수사이트 인증
+                    </li>
+                </ul>
+                <p id="a_next"></p>
+            </div>
         </div>
     </footer>
     <!--    footer-->
