@@ -16,6 +16,7 @@
 
 <body>
     <header>
+        <div class="bg"></div>
         <div class="util">
             <div id="util_wrap">
                 <ul id="u_custom">
@@ -377,8 +378,7 @@
                         </li>
                     </ul>
                 </li>
-                <li id="b_menu">
-                </li>
+                <li id="b_menu"></li>
             </ul>
         </nav>
         <!--        nav-->
@@ -586,39 +586,38 @@
                         }
                     }, 50);
 
-                    //이벤트 발생
+                    
                     $("#card_slide > .btn_next").click(function() {
                         $("#card_slide > .btn_prev").css({
                             backgroundImage: "url(img/icon_prev.png)"
                         });
                         leftValue -= 265;
-                        //만약 left에 적용된 속성이 maxLeft가 되면 더이상 증가하거나 감소하지 않게
+                        
                         if (leftValue <= maxLeft) {
                             leftValue = maxLeft;
                             $("#card_slide > .btn_next").css({
                                 backgroundImage: "url(img/icon_next.png)"
                             });
                         }
-                        //.imgs_wrap > ul 의 left속성이 -265씩 이동
+                        
                         $(".imgs_wrap > ul").css({
                             left: leftValue
                         });
                     });
 
-                    //이벤트 발생
                     $("#card_slide > .btn_prev").click(function() {
                         $("#card_slide > .btn_next").css({
                             backgroundImage: "url(img/icon_next.png)"
                         });
                         leftValue += 265;
-                        //만약 left에 적용된 속성이 maxLeft가 되면 더이상 증가하거나 감소하지 않게
+                        
                         if (leftValue >= 0) {
                             leftValue = 0;
                             $("#card_slide > .btn_prev").css({
                                 backgroundImage: "url(img/icon_prev.png)"
                             });
                         }
-                        //.imgs_wrap > ul 의 left속성이 +265씩 이동
+                        
                         $(".imgs_wrap > ul").css({
                             left: leftValue
                         });
@@ -654,149 +653,43 @@
             <div class="card_section">
                 <div class="card01">
                     <h4>라이프 스타일</h4>
-                    <ul>
-                        <li id="section_01">
-                            <div id="c_title">
-                                <div id="c_title_wrapper">
-                                    <h2>
-                                        우리와 함께라면 더 즐거운 여행<br>
-                                        헤매지 말고 우리와 함꼐하세요
-                                    </h2>
-                                    <p>
-                                        해외/여행 상시 할인&이벤트
-                                        <br>
-                                        국내외 항공·여행·렌터카·호텔까지 한 번에
-                                    </p>
-                                    <a href="#"><button>
-                                            우리카드 여행몰<br>
-                                            바로가기
-                                        </button></a>
-                                </div>
+                    <ul class="slides">
+                        <input type="radio" name="radio-btn" id="img-1" checked />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <p class="section" id="sec_01"></p>
+                                <a href="#"><button>
+                                        우리카드 여행몰<br>
+                                        바로가기
+                                    </button></a>
                             </div>
                         </li>
-                        <li id="section_02">
-                            <div id="c_title">
-                                <div id="c_title_wrapper">
-                                    <h2>
-                                        우리카드가 드리는 해외혜택,
-                                        <br>
-                                        빠짐없이 누리세요
-                                    </h2>
-                                    <p>
-                                        우리카드로 해외를 이용하는 방법
-                                    </p>
-                                    <a href="#"><button>
+
+                        <input type="radio" name="radio-btn" id="img-2" />
+                        <li class="slide-container">
+                            <div class="slide">
+                                <p class="section" id="sec_02"></p>
+                                  <a href="#"><button>
                                             해외이용안내<br>
                                             바로가기
                                         </button></a>
-                                </div>
                             </div>
                         </li>
-                        <li id="section_03">
-                            <div id="c_title">
-                                <div id="c_title_wrapper">
-                                    <h2>
-                                        스마트한 <strong>그린피 할인예약</strong>
-                                        <br>
-                                        우리카드로 누리세요
-                                    </h2>
-                                    <p>
-                                        선결제 할인 예약, 소셜커머스,
-                                        <br>
-                                        골프 여행까지 골프에 대한 모든 혜택
-                                    </p>
-                                    <a href="#"><button>
-                                            골프(XGOLF)서비스
-                                            <br>
-                                            바로가기
-                                        </button></a>
-                                    <a href="#"><button>
-                                            해외골프여행
-                                            <br>
-                                            바로가기
-                                        </button></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="section_04">
-                            <div id="c_title">
-                                <div id="c_title_wrapper">
-                                    <h2>
-                                        우리카드 <strong>웨딩밴드</strong> 가입하고
-                                        <br>
-                                        다양한 혜택 누리세요
-                                    </h2>
-                                    <p>
-                                        우리카드 고객님께 드리는
-                                        <br>
-                                        특별한 웨딩 멤버십 서비스입니다.
-                                    </p>
-                                    <a href="#"><button></button></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="section_05">
-                            <div id="c_title">
-                                <div id="c_title_wrapper">
-                                    <h2>
-                                        내 인생의 <strong>반쪽</strong>에게 당신의
-                                        <br>
-                                        <strong>사랑</strong>을 표현하는 방법
-                                    </h2>
-                                    <p>
-                                        반려동물 쇼핑몰 할인, 선물 배송,
-                                        <br>
-                                        장례비 지원 등 실속 있는 혜택을 챙겨보세요.
-                                    </p>
-                                    <a href="#"><button>
-                                            반려동물 케어서비스 <br>
-                                            바로가기
-                                        </button></a>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="section_06">
-                            <div id="c_title">
-                                <div id="c_title_wrapper">
-                                    <h2>
-                                        위비렌탈로
-                                        <br>
-                                        알뜰 살뜰하게 장만하세요
-                                    </h2>
-                                    <p>
-                                        렌탈 계약시 상시 할인&이벤트
-                                        <br>
-                                        사은품까지 챙겨가세요
-                                    </p>
-                                    <a href="#"><button>
+                        <input type="radio" name="radio-btn" id="img-3" />
+                        <li class="slide-container">
+                            <div class="slide">
+                               <p class="section" id="sec_03"></p>
+                                <a href="#"><button>
                                             위비마켓 렌탈서비스로
                                             <br>
                                             바로가기
                                         </button></a>
-                                </div>
                             </div>
                         </li>
-                        <li id="section_07">
-                            <div id="c_title">
-                                <div id="c_title_wrapper">
-                                    <h2>
-                                        <strong>생활 곳곳</strong>에서 우리카드로
-                                        <br>
-                                        다양한 할인을 누리세요
-                                    </h2>
-                                    <p>
-                                        생활에 플러스 되는 특별한 서비스
-                                    </p>
-                                    <a href="#"><button>
-                                            보험상품몰<br>
-                                            바로가기
-                                        </button></a>
-                                    <a href="#"><button>
-                                            유리교육몰<br>
-                                            바로가기
-                                        </button></a>
-                                </div>
-                            </div>
+                        <li class="nav-dots">
+                            <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                            <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                            <label for="img-3" class="nav-dot" id="img-dot-3"></label>
                         </li>
                     </ul>
                 </div>
@@ -1023,67 +916,83 @@
                 <a href="#"><img src="img/logo_youtube.png" alt="logo"></a>
             </div>
             <img src="img/logo_woori_b.png" alt="logo">
-            <div class="award">
-                <p id="a_prev"></p>
-                <ul>
-                    <li>
-                        <img src="img/footer/icon_award01.jpg" alt="aword">
-                        2019 제7회 대한민국 브랜드대상<br>
-                        우리카드 ‘카드의정석’
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award02.png" alt="aword">
-                        2019 한국표준협회 프리미엄 브랜드지수<br>
-                        체크카드 부문 1위 6년 연속 수상
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award03.gif" alt="aword">
-                        2019 소비자에게 신뢰받는<br>
-                        착한브랜드 5년 연속 대상
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award05.png" alt="aword">
-                        2019 대한민국 베스트뱅커 대상<br>
-                        베스트 여신금융 부문 수상
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award06.png" alt="aword">
-                        제24회 매경금융상품대상<br>
-                        우수상 우리카드 카드의정석
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award06.png" alt="aword">
-                        2018 대한민국 금융대상<br>
-                        여신금융대상 수상
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award07.gif" alt="aword">
-                        2018 한국의 사회공헌<br>
-                        사회복지부문 대상
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award08.jpg" alt="aword">
-                        2018 이데일리 금융산업대상<br>
-                        여신금융협회장상 수상
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award09.png" alt="aword">
-                        2018년 퍼스트 굿 브랜드<br>
-                        대상 신용카드부문 수상
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award10.png" alt="aword">
-                        제 6회 금융소비자보호대상<br>
-                        여신금융부문 최우수상 수상
-                    </li>
-                    <li>
-                        <img src="img/footer/icon_award11.jpg" alt="aword">
-                        웹 접근성<br>
-                        우수사이트 인증
-                    </li>
-                </ul>
-                <p id="a_next"></p>
+            <div id="wrap">
+                <div class="slider-wrap js-slider-wrap">
+                    <div class="slider js-slider">
+                        <div class="slider-inner js-slider-inner">
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                            <div class="slider-item js-slider-item"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <script>
+                $(function() {
+                    (function() {
+                        var $sliderWrap = $('.js-slider-wrap');
+                        var $slider = $('.js-slider');
+                        var $sliderInner = $('.js-slider-inner');
+                        var $sliderItem = $('.js-slider-item');
+
+                        var sliderItemWidth = $sliderItem.outerWidth();
+                        var sliderItemHeight = $sliderItem.outerHeight();
+                        var sliderNum = $sliderItem.length;
+                        var sliderInnerWidth = sliderItemWidth * sliderNum;
+                        $('.slider').css('width', sliderItemWidth);
+                        $('.slider-inner').css('width', sliderInnerWidth);
+
+                        var sliderCurrent = 0;
+
+                        var sliding = function() {
+                            var arr = [];
+                            for (var i = 0; i < sliderNum; i++) {
+                                arr[i] = sliderItemWidth * i * -1;
+                            }
+                            $sliderInner.stop().animate({
+                                left: arr[sliderCurrent]
+                            });
+                        };
+
+                        $sliderWrap.append("<ul class='slider-move js-slider-move'><li class='slider-move-prev'><</li><li class='slider-move-next'>></li></ul>");
+                        var sliderMoveHeight = sliderItemHeight * -0.6;
+                        $('.slider-move > li').css('top', sliderMoveHeight);
+
+                        var sliderCurrentNavi = '';
+                        var arr = [];
+                        for (var i = 0; i < sliderNum; i++) {
+                            arr[i] = i + 1;
+                        }
+
+                        $('.slider-navi>li').eq(sliderCurrent).addClass('selected');
+                        $('.slider-move-prev').click(function() {
+                            if (sliderCurrent <= 0) {
+                                sliderCurrent = sliderNum - 1;
+                            } else {
+                                sliderCurrent--;
+                            }
+                            $('.slider-navi>li').removeClass('selected');
+                            $('.slider-navi>li').eq(sliderCurrent).addClass('selected');
+                            sliding();
+
+                            console.log();
+
+                        });
+
+                        $('.slider-move-next').click(function() {
+                            if (sliderCurrent >= sliderNum - 1) {
+                                sliderCurrent = 0;
+                            } else {
+                                sliderCurrent++;
+                            }
+                            sliding();
+                        });
+                    })();
+                });
+            </script>
         </div>
     </footer>
     <!--    footer-->

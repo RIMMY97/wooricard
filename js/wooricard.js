@@ -15,6 +15,18 @@ $("document").ready(function () {
     });
 
     //main slider
+    $(window).scroll(function() {
+                var pos = $(window).scrollTop();
+
+                if (pos >= 500) {
+                    $("nav").addClass("fixed");
+                    $(".bg").addClass("on");
+                } else  {
+                    $("nav").removeClass("fixed");
+                    $(".bg").removeClass("on");
+                }
+            })
+    //nav
 
     var slideCount = $('#slider ul li').length;
     var slideWidth = $('#slider ul li').width();
@@ -59,7 +71,7 @@ $("document").ready(function () {
         moveRight();
     });
 
-    //금융 소비자 JS
+    //금융 소비자 보호 JS
 
     var footer = $("footer .footer_inner .sel_box"),
         footer_sel = $("footer .footer_inner .sel_box p"),
